@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartidoBasquet2024", "PartidoBasquet2024\PartidoBasquet2024.csproj", "{357ADE2A-2DBD-46B6-BDF4-151BDD47D63B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{357ADE2A-2DBD-46B6-BDF4-151BDD47D63B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{357ADE2A-2DBD-46B6-BDF4-151BDD47D63B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{357ADE2A-2DBD-46B6-BDF4-151BDD47D63B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{357ADE2A-2DBD-46B6-BDF4-151BDD47D63B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5BB5F17D-405D-43E2-A0BF-614D22FD0793}
+	EndGlobalSection
+EndGlobal
