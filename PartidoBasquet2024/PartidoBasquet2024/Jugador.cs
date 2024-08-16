@@ -25,7 +25,7 @@ namespace PartidoBasquet2024
         {
             Nombre = nombre;
 			camiseta = numero;
-            puntos= new int[3];
+            puntos = new int[3];
         }
         public void CargarPuntos (int canasta)
         {

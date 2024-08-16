@@ -52,6 +52,8 @@
     <Compile Include="AgregarJugadores.Designer.cs">
       <DependentUpon>AgregarJugadores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cancha.cs" />
+    <Compile Include="Equipo.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +64,12 @@
     <Compile Include="Jugador.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Puntuacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Puntuacion.Designer.cs">
+      <DependentUpon>Puntuacion.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AgregarJugadores.resx">
       <DependentUpon>AgregarJugadores.cs</DependentUpon>
     </EmbeddedResource>
@@ -77,6 +85,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Puntuacion.resx">
+      <DependentUpon>Puntuacion.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

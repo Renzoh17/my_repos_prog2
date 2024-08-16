@@ -13,48 +13,70 @@ namespace PartidoBasquet2024
     public partial class Form1 : Form
     {
         private Partido partido;
-        private Equipo e1, e2;
+        private Equipo[] equipos = new Equipo[2];
         public Form1()
         {
+            for (int i = 0; i < 2; i++) equipos[i] = new Equipo();
             InitializeComponent();
         }
 
-        private void btnLocal_Click(object sender, EventArgs e)
+        private void btnAgregarEquipo_Click(object sender, EventArgs e)
         {
-            AgregarJugadores vtnAgregar = new AgregarJugadores();
-            e1 = new Equipo();
-            for (int i = 0; i < Convert.ToInt32(tbxCantLocal.Text); i++)
+            int cantJug = Convert.ToInt32(tbxCantJug.Text);
+            int i = 0;
+            if (cantJug >= 7 && cantJug <= 15)
             {
-                while(vtnAgregar.ShowDialog() == DialogResult.OK)
+                AgregarJugadores vtnAgregar = new AgregarJugadores();
+                while (i < cantJug)
                 {
-                    e1.AgregarJugador(new Jugador(vtnAgregar.tbxNombre.Text,Convert.ToInt32(vtnAgregar.tbxCamiseta.Text)));
+                    if(vtnAgregar.ShowDialog() == DialogResult.OK)
+                    {
+                        if (rbLocal.Checked) equipos[0].AgregarJugador(new Jugador(vtnAgregar.tbxNombre.Text.ToString(), Convert.ToInt32(vtnAgregar.tbxNroCamiseta.Text)));
+                        else equipos[1].AgregarJugador(new Jugador(vtnAgregar.tbxNombre.Text, Convert.ToInt32(vtnAgregar.tbxNroCamiseta.Text)));                    
+                        vtnAgregar.tbxNombre.Clear();
+                        vtnAgregar.tbxNroCamiseta.Clear();
+                    }
+                    else
+                    {
+                        i = 20; //Sale del rango para cancelar la carga
+                    }
+                    i++;
                 }
+                tbxCantJug.Clear();
+                vtnAgregar.Dispose();
             }
-            btnLocal.Enabled = false;
-            tbxCantLocal.Enabled = false;
-            vtnAgregar.Dispose();
+            else
+            {
+                MessageBox.Show("ERROR! Ingrese la cantidad de jugadores correctamente.");
+            }
         }
 
-        private void btnVisitante_Click(object sender, EventArgs e)
+        private void btnJugar_Click(object sender, EventArgs e)
         {
-            AgregarJugadores vtnAgregar = new AgregarJugadores();
-            e2 = new Equipo();
-            for (int i = 0; i < Convert.ToInt32(tbxCantLocal.Text); i++)
+            Puntuacion vtnpts = new Puntuacion();
+            partido = new Partido(new Cancha(tbNombre.Text, tbUbicacion.Text, Convert.ToInt32(tbCantidad.Text)));
+            tbNombre.Clear();
+            tbUbicacion.Clear();
+            tbCantidad.Clear();
+            partido.AgregarEquipo(equipos);
+            while (vtnpts.ShowDialog() == DialogResult.Yes)
             {
-                while (vtnAgregar.ShowDialog() == DialogResult.OK)
-                {
-                    e2.AgregarJugador(new Jugador(vtnAgregar.tbxNombre.Text, Convert.ToInt32(vtnAgregar.tbxCamiseta.Text)));
-                }
+                
             }
-            btnVisitante.Enabled = false;
-            tbxCantVisitante.Enabled = false;
-            vtnAgregar.Dispose();
         }
 
-        private void btnPrueba_Click(object sender, EventArgs e)
+        private void btnListas_Click(object sender, EventArgs e)
         {
-            partido = new Partido(new Cancha("25 de mayo", "9 de Julio", 300));
-            partido.AgregarEquipo(e1,e2);            
+            lListaLocal.Items.Clear();
+            lListaVisitante.Items.Clear();
+            for (int i = 0; i < equipos[0].Cantidad; i++)
+            {
+                lListaLocal.Items.Add(equipos[0].VerJugadores(i).Nombre + "Nro: " + equipos[0].VerJugadores(i).Camiseta);
+            }
+            for (int i = 0; i < equipos[1].Cantidad; i++)
+            {
+                lListaVisitante.Items.Add(equipos[1].VerJugadores(i).Nombre + "Nro: " + equipos[1].VerJugadores(i).Camiseta);
+            }
         }
     }
 }
