@@ -41,8 +41,7 @@ namespace Guia5_Repaso
             }
             p.Codigo = Convert.ToInt32(tbCodigo.Text);
             presupuesto.AgregarProducto(p);
-            cbBorrarProducto.Items.Add(p.Codigo);
-            lblistaProductos.Items.Add(p.ToString());
+            cbBorrarProducto.Items.Add(p);
             if (!btnBorrarProducto.Enabled) btnBorrarProducto.Enabled = true; 
             tbPrecioB.Clear();
             tbLargo.Clear();
@@ -65,7 +64,6 @@ namespace Guia5_Repaso
                 vtnMP.Dispose();
             }
             cbBorrarProducto.Items.Clear();
-            lblistaProductos.Items.Clear();
             tbNombreCliente.Enabled = true;
             tbDireccionCliente.Enabled = true;
             btnIniciarPresupuesto.Enabled = true;
@@ -75,14 +73,16 @@ namespace Guia5_Repaso
 
         private void btnBorrarProducto_Click(object sender, EventArgs e)
         {
-            bool el = presupuesto.QuitarProducto(Convert.ToInt32(cbBorrarProducto.SelectedItem));
-            if (el)
+            Producto p = cbBorrarProducto.SelectedItem as Producto;
+            if (p != null)
             {
-                lblistaProductos.Items.Add($"Producto Eliminado, Codigo: {cbBorrarProducto.SelectedItem}");
-                cbBorrarProducto.Items.Remove(cbBorrarProducto.SelectedItem);
-                cbBorrarProducto.Text = "";
+                if (presupuesto.QuitarProducto(p.Codigo))
+                {
+                    cbBorrarProducto.Items.Remove(cbBorrarProducto.SelectedItem);
+                    cbBorrarProducto.Text = "";
+                }
+                else MessageBox.Show("El elemento a Eliminar no existe");
             }
-            else MessageBox.Show("El elemento a Eliminar no existe");
         }
     }
 }

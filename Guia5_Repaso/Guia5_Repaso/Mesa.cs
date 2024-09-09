@@ -26,7 +26,7 @@ namespace Guia5_Repaso
         }
         public override string ToString()
         {
-            return $"Codigo: {Codigo}, Mesa de {largo}x{ancho}";
+            return $"{Codigo}: Mesa de {largo}x{ancho}";
         }
     }
 }

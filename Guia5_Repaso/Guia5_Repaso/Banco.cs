@@ -22,7 +22,7 @@ namespace Guia5_Repaso
         }
         public override string ToString()
         {
-            return $"Codigo: {Codigo}, Banco de {largo}";
+            return $"{Codigo}: Banco de {largo}";
         }
     }
 }

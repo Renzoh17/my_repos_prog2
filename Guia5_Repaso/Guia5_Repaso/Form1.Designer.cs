@@ -38,8 +38,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.gbMostrarProductos = new System.Windows.Forms.GroupBox();
-            this.lblistaProductos = new System.Windows.Forms.ListBox();
             this.gbCargarProductos = new System.Windows.Forms.GroupBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.tbGrosor = new System.Windows.Forms.TextBox();
@@ -55,7 +53,6 @@
             this.btnImportar = new System.Windows.Forms.Button();
             this.btnExportar = new System.Windows.Forms.Button();
             this.gbCliente.SuspendLayout();
-            this.gbMostrarProductos.SuspendLayout();
             this.gbCargarProductos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,7 +68,7 @@
             this.gbCliente.Controls.Add(this.label1);
             this.gbCliente.Location = new System.Drawing.Point(12, 12);
             this.gbCliente.Name = "gbCliente";
-            this.gbCliente.Size = new System.Drawing.Size(200, 160);
+            this.gbCliente.Size = new System.Drawing.Size(253, 160);
             this.gbCliente.TabIndex = 0;
             this.gbCliente.TabStop = false;
             this.gbCliente.Text = "Cliente";
@@ -79,7 +76,7 @@
             // btnBorrarProducto
             // 
             this.btnBorrarProducto.Enabled = false;
-            this.btnBorrarProducto.Location = new System.Drawing.Point(119, 122);
+            this.btnBorrarProducto.Location = new System.Drawing.Point(172, 122);
             this.btnBorrarProducto.Name = "btnBorrarProducto";
             this.btnBorrarProducto.Size = new System.Drawing.Size(75, 23);
             this.btnBorrarProducto.TabIndex = 7;
@@ -92,13 +89,13 @@
             this.cbBorrarProducto.FormattingEnabled = true;
             this.cbBorrarProducto.Location = new System.Drawing.Point(6, 124);
             this.cbBorrarProducto.Name = "cbBorrarProducto";
-            this.cbBorrarProducto.Size = new System.Drawing.Size(78, 21);
+            this.cbBorrarProducto.Size = new System.Drawing.Size(160, 21);
             this.cbBorrarProducto.TabIndex = 6;
             // 
             // btnCerrarPresupuesto
             // 
             this.btnCerrarPresupuesto.Enabled = false;
-            this.btnCerrarPresupuesto.Location = new System.Drawing.Point(119, 66);
+            this.btnCerrarPresupuesto.Location = new System.Drawing.Point(172, 66);
             this.btnCerrarPresupuesto.Name = "btnCerrarPresupuesto";
             this.btnCerrarPresupuesto.Size = new System.Drawing.Size(75, 35);
             this.btnCerrarPresupuesto.TabIndex = 5;
@@ -118,16 +115,16 @@
             // 
             // tbDireccionCliente
             // 
-            this.tbDireccionCliente.Location = new System.Drawing.Point(94, 35);
+            this.tbDireccionCliente.Location = new System.Drawing.Point(75, 35);
             this.tbDireccionCliente.Name = "tbDireccionCliente";
-            this.tbDireccionCliente.Size = new System.Drawing.Size(100, 20);
+            this.tbDireccionCliente.Size = new System.Drawing.Size(172, 20);
             this.tbDireccionCliente.TabIndex = 3;
             // 
             // tbNombreCliente
             // 
-            this.tbNombreCliente.Location = new System.Drawing.Point(94, 13);
+            this.tbNombreCliente.Location = new System.Drawing.Point(75, 13);
             this.tbNombreCliente.Name = "tbNombreCliente";
-            this.tbNombreCliente.Size = new System.Drawing.Size(100, 20);
+            this.tbNombreCliente.Size = new System.Drawing.Size(172, 20);
             this.tbNombreCliente.TabIndex = 2;
             // 
             // label2
@@ -148,24 +145,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre:";
             // 
-            // gbMostrarProductos
-            // 
-            this.gbMostrarProductos.Controls.Add(this.lblistaProductos);
-            this.gbMostrarProductos.Location = new System.Drawing.Point(218, 13);
-            this.gbMostrarProductos.Name = "gbMostrarProductos";
-            this.gbMostrarProductos.Size = new System.Drawing.Size(200, 159);
-            this.gbMostrarProductos.TabIndex = 1;
-            this.gbMostrarProductos.TabStop = false;
-            this.gbMostrarProductos.Text = "Listado Productos";
-            // 
-            // lblistaProductos
-            // 
-            this.lblistaProductos.FormattingEnabled = true;
-            this.lblistaProductos.Location = new System.Drawing.Point(6, 15);
-            this.lblistaProductos.Name = "lblistaProductos";
-            this.lblistaProductos.Size = new System.Drawing.Size(188, 134);
-            this.lblistaProductos.TabIndex = 0;
-            // 
             // gbCargarProductos
             // 
             this.gbCargarProductos.Controls.Add(this.btnAgregar);
@@ -180,7 +159,7 @@
             this.gbCargarProductos.Controls.Add(this.label4);
             this.gbCargarProductos.Controls.Add(this.label3);
             this.gbCargarProductos.Enabled = false;
-            this.gbCargarProductos.Location = new System.Drawing.Point(424, 13);
+            this.gbCargarProductos.Location = new System.Drawing.Point(271, 12);
             this.gbCargarProductos.Name = "gbCargarProductos";
             this.gbCargarProductos.Size = new System.Drawing.Size(216, 100);
             this.gbCargarProductos.TabIndex = 2;
@@ -279,7 +258,7 @@
             // 
             // btnImportar
             // 
-            this.btnImportar.Location = new System.Drawing.Point(433, 134);
+            this.btnImportar.Location = new System.Drawing.Point(280, 133);
             this.btnImportar.Name = "btnImportar";
             this.btnImportar.Size = new System.Drawing.Size(75, 23);
             this.btnImportar.TabIndex = 11;
@@ -288,7 +267,7 @@
             // 
             // btnExportar
             // 
-            this.btnExportar.Location = new System.Drawing.Point(559, 134);
+            this.btnExportar.Location = new System.Drawing.Point(406, 133);
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(75, 23);
             this.btnExportar.TabIndex = 12;
@@ -299,17 +278,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(650, 180);
+            this.ClientSize = new System.Drawing.Size(499, 180);
             this.Controls.Add(this.btnExportar);
             this.Controls.Add(this.btnImportar);
             this.Controls.Add(this.gbCargarProductos);
-            this.Controls.Add(this.gbMostrarProductos);
             this.Controls.Add(this.gbCliente);
             this.Name = "Form1";
             this.Text = "Form1";
             this.gbCliente.ResumeLayout(false);
             this.gbCliente.PerformLayout();
-            this.gbMostrarProductos.ResumeLayout(false);
             this.gbCargarProductos.ResumeLayout(false);
             this.gbCargarProductos.PerformLayout();
             this.ResumeLayout(false);
@@ -328,8 +305,6 @@
         private System.Windows.Forms.Button btnIniciarPresupuesto;
         private System.Windows.Forms.TextBox tbDireccionCliente;
         private System.Windows.Forms.TextBox tbNombreCliente;
-        private System.Windows.Forms.GroupBox gbMostrarProductos;
-        private System.Windows.Forms.ListBox lblistaProductos;
         private System.Windows.Forms.GroupBox gbCargarProductos;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
