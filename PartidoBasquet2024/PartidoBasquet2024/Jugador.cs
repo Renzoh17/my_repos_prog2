@@ -42,7 +42,7 @@ namespace PartidoBasquet2024
 
         public int VerPuntos()
         {
-            return puntos[0] +puntos[1] * 2 + puntos[2] * 3;
+            return puntos[0] + (puntos[1] * 2) + (puntos[2] * 3);
         }
         public double PorcentajeSimples()
         {

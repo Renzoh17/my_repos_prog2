@@ -16,11 +16,17 @@ namespace PartidoBasquet2024
         {
             get { return listaJugadores.Count; }
         }
-        private int puntos = 0;
+        private int puntos;
         public int Puntos
         {
-            private set { puntos += value; }
-            get { return puntos; }
+            get{
+                puntos = 0;
+                for (int i = 0; i < Cantidad; i++)
+                {
+                    puntos += ((Jugador)listaJugadores[i]).VerPuntos();
+                }
+                return puntos;
+            }
         }
         public Equipo()
         {
@@ -43,12 +49,11 @@ namespace PartidoBasquet2024
         }
         public void AgregarPuntos(int nro, int canasta)
         {
+            j = Buscar(nro);
             if (j != null)
             {
                 j.CargarPuntos(canasta);
-                puntos = j.VerPuntos();
             }
-
         }
         Jugador Buscar(int nro)
         {

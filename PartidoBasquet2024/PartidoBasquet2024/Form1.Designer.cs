@@ -36,16 +36,16 @@
             this.rbVisitante = new System.Windows.Forms.RadioButton();
             this.rbLocal = new System.Windows.Forms.RadioButton();
             this.gbListaLocal = new System.Windows.Forms.GroupBox();
-            this.lListaLocal = new System.Windows.Forms.ListBox();
-            this.lListaVisitante = new System.Windows.Forms.ListBox();
             this.btnListas = new System.Windows.Forms.Button();
+            this.lListaVisitante = new System.Windows.Forms.ListBox();
+            this.lListaLocal = new System.Windows.Forms.ListBox();
             this.gbComenzar = new System.Windows.Forms.GroupBox();
-            this.tbNombre = new System.Windows.Forms.TextBox();
-            this.tbUbicacion = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tbCantidad = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tbCantidad = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tbUbicacion = new System.Windows.Forms.TextBox();
+            this.tbNombre = new System.Windows.Forms.TextBox();
             this.gbAgregarE.SuspendLayout();
             this.gbListaLocal.SuspendLayout();
             this.gbComenzar.SuspendLayout();
@@ -135,22 +135,6 @@
             this.gbListaLocal.TabStop = false;
             this.gbListaLocal.Text = "Listado Jugadores";
             // 
-            // lListaLocal
-            // 
-            this.lListaLocal.FormattingEnabled = true;
-            this.lListaLocal.Location = new System.Drawing.Point(6, 19);
-            this.lListaLocal.Name = "lListaLocal";
-            this.lListaLocal.Size = new System.Drawing.Size(210, 212);
-            this.lListaLocal.TabIndex = 0;
-            // 
-            // lListaVisitante
-            // 
-            this.lListaVisitante.FormattingEnabled = true;
-            this.lListaVisitante.Location = new System.Drawing.Point(225, 19);
-            this.lListaVisitante.Name = "lListaVisitante";
-            this.lListaVisitante.Size = new System.Drawing.Size(210, 212);
-            this.lListaVisitante.TabIndex = 1;
-            // 
             // btnListas
             // 
             this.btnListas.Location = new System.Drawing.Point(6, 237);
@@ -160,6 +144,22 @@
             this.btnListas.Text = "Obtener Listas";
             this.btnListas.UseVisualStyleBackColor = true;
             this.btnListas.Click += new System.EventHandler(this.btnListas_Click);
+            // 
+            // lListaVisitante
+            // 
+            this.lListaVisitante.FormattingEnabled = true;
+            this.lListaVisitante.Location = new System.Drawing.Point(225, 19);
+            this.lListaVisitante.Name = "lListaVisitante";
+            this.lListaVisitante.Size = new System.Drawing.Size(210, 212);
+            this.lListaVisitante.TabIndex = 1;
+            // 
+            // lListaLocal
+            // 
+            this.lListaLocal.FormattingEnabled = true;
+            this.lListaLocal.Location = new System.Drawing.Point(6, 19);
+            this.lListaLocal.Name = "lListaLocal";
+            this.lListaLocal.Size = new System.Drawing.Size(210, 212);
+            this.lListaLocal.TabIndex = 0;
             // 
             // gbComenzar
             // 
@@ -177,35 +177,14 @@
             this.gbComenzar.TabStop = false;
             this.gbComenzar.Text = "Comenzar Partido";
             // 
-            // tbNombre
+            // label4
             // 
-            this.tbNombre.Location = new System.Drawing.Point(136, 19);
-            this.tbNombre.Name = "tbNombre";
-            this.tbNombre.Size = new System.Drawing.Size(126, 20);
-            this.tbNombre.TabIndex = 1;
-            // 
-            // tbUbicacion
-            // 
-            this.tbUbicacion.Location = new System.Drawing.Point(136, 45);
-            this.tbUbicacion.Name = "tbUbicacion";
-            this.tbUbicacion.Size = new System.Drawing.Size(126, 20);
-            this.tbUbicacion.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Nombre de la Cancha: ";
-            // 
-            // tbCantidad
-            // 
-            this.tbCantidad.Location = new System.Drawing.Point(136, 71);
-            this.tbCantidad.Name = "tbCantidad";
-            this.tbCantidad.Size = new System.Drawing.Size(126, 20);
-            this.tbCantidad.TabIndex = 4;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 74);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(114, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Espacio de la Cancha:";
             // 
             // label3
             // 
@@ -216,20 +195,41 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Ubicacion de la Cancha:";
             // 
-            // label4
+            // tbCantidad
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 74);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(114, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Espacio de la Cancha:";
+            this.tbCantidad.Location = new System.Drawing.Point(136, 71);
+            this.tbCantidad.Name = "tbCantidad";
+            this.tbCantidad.Size = new System.Drawing.Size(126, 20);
+            this.tbCantidad.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(116, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Nombre de la Cancha: ";
+            // 
+            // tbUbicacion
+            // 
+            this.tbUbicacion.Location = new System.Drawing.Point(136, 45);
+            this.tbUbicacion.Name = "tbUbicacion";
+            this.tbUbicacion.Size = new System.Drawing.Size(126, 20);
+            this.tbUbicacion.TabIndex = 2;
+            // 
+            // tbNombre
+            // 
+            this.tbNombre.Location = new System.Drawing.Point(136, 19);
+            this.tbNombre.Name = "tbNombre";
+            this.tbNombre.Size = new System.Drawing.Size(126, 20);
+            this.tbNombre.TabIndex = 1;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(739, 308);
+            this.ClientSize = new System.Drawing.Size(739, 307);
             this.Controls.Add(this.gbComenzar);
             this.Controls.Add(this.gbListaLocal);
             this.Controls.Add(this.gbAgregarE);
