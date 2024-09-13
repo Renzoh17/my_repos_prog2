@@ -11,12 +11,15 @@ namespace Ejercicio_1
     {
         public string Clasificar(string cadena, out string patente)
         {
-            cadena = cadena.Trim();
+            cadena = cadena.Trim().ToUpper();
             patente = "";
-            //([0-3]{1,}\w)([0-3]{1,}\d)
-            Match m = Regex.Match(cadena, @"(\d[0-3])");
-            patente = m.Value;
-            return "";
+            Match ml = null, md = null;
+            ml = Regex.Match(cadena, @"([A-Z]{1,})");
+            md = Regex.Match(cadena, @"\d{1,}");
+            patente += ml.Length;
+            patente += " " + md.Length + ", ";
+            
+            return "Desconocido";
         }
     }
 }
