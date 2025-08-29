@@ -1,0 +1,4 @@
+s;10;Limpieza;3;5000
+s;15;Revision;2;3000
+p;200;mouse;10;1200
+p;210;azucar;20;1000
