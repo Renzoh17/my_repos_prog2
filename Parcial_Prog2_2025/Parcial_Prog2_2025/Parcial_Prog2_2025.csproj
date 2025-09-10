@@ -62,9 +62,7 @@
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Mesa.cs" />
     <Compile Include="Models\Presupuesto.cs" />
-    <Compile Include="..\..\..\Downloads\Producto.cs">
-      <Link>Models\Producto.cs</Link>
-    </Compile>
+    <Compile Include="Models\Producto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

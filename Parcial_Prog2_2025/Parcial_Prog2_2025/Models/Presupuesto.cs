@@ -54,14 +54,20 @@ namespace Parcial_Prog2_2025
 
         public string[] Resumen()
         {
-            string s = "";
+            string[] s = new string[3];
+            int i = 0;
             foreach (Producto p in listaProductos)
-                s += $@"{p.ToString()}{Environment.NewLine}";
+            {
+                s[i++] = p.ToString();
+            }
+                
             return new string[]
             {
                 solicitante.ToString(),
-                s,
                 PrecioTotal.ToString(),
+                s[0],
+                s[1],
+                s[2]
             };
         }
     }
